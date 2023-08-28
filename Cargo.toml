@@ -1,0 +1,28 @@
+[package]
+name = "neogit"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# CLI parsing.
+clap = { version = "4.3.19", features = ["derive"] }
+
+# Error handling.
+anyhow = "1.0.75"
+
+# For Object ID generated via SHA1 hashing.
+sha-1 = "0.10.1"
+
+# For Object ID hexadecimal representation.
+hex = "0.4.3"
+
+# For zlib compressing and decompressing.
+flate2 = "1.0.27"
+
+# For time/timezones for authors/commits.
+chrono = "0.4.26"
+
+# To enable commiting, as we don't support folders yet.
+[[bin]]
+name = "neogit"
+path = "main.rs"
